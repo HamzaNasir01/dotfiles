@@ -1,5 +1,6 @@
 xrandr --dpi 144
 xinput set-prop 12 'Coordinate Transformation Matrix' 2.5 0 0 0 2.5 0 0 0 1
+setxkbmap gb
 
 export EDITOR=nvim
 export VISUAL=nvim
