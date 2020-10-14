@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'joshdick/onedark.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 set termguicolors
