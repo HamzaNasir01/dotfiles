@@ -15,9 +15,6 @@ alias sudo="sudo "
 alias vim="nvim"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# Add SSH key to ssh-agent
-ssh-add $HOME/.ssh/id_rsa
-
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
