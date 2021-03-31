@@ -34,3 +34,8 @@ require'nvim-treesitter.configs'.setup {
     indent = { enable = true },
 }
 EOF
+
+" pyright language server
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
