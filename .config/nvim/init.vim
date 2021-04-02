@@ -4,6 +4,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'hoob3rt/lualine.nvim'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 set termguicolors
