@@ -3,6 +3,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+Plug 'hoob3rt/lualine.nvim'
 call plug#end()
 
 set termguicolors
@@ -42,7 +43,7 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 " nvim-compe config
-lua <<EOF
+lua << EOF
 require'compe'.setup {
   enabled = true;
   autocomplete = true;
@@ -108,4 +109,11 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+EOF
+
+" lualine config
+lua << EOF
+require('lualine').setup {
+  options = { theme = 'onedark' }
+}
 EOF
