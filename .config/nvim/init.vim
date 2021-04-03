@@ -18,7 +18,7 @@ colorscheme onedark
 set tabstop=4 shiftwidth=4 expandtab
 
 " treesitter-based folding
-set foldmethod=expr
+set foldmethod=indent
 set foldexpr=nvim_treesitter#foldexpr()
 
 " ALT-j and ALT-k to move lines
