@@ -7,6 +7,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'tpope/vim-commentary'
+Plug 'lervag/vimtex'
 call plug#end()
 
 set termguicolors
@@ -30,6 +31,9 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" vimtex pdf viewer
+let g:vimtex_view_method = 'zathura'
 
 " language servers
 lua << EOF
@@ -84,7 +88,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.rust_analyzer.setup {
-capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 local t = function(str)
@@ -125,10 +129,6 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-EOF
-
-" LSP snippet support
-lua << EOF
 EOF
 
 " lualine config
