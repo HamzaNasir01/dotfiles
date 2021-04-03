@@ -34,6 +34,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " language servers
 lua << EOF
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.texlab.setup{}
 EOF
 
 " nvim-treesitter config
