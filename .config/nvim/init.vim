@@ -8,6 +8,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 call plug#end()
 
